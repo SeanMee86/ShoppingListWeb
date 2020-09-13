@@ -3,3 +3,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.authBtn {
+  width: 100%;
+  max-width: 140px;
+  margin: 20px auto;
+}

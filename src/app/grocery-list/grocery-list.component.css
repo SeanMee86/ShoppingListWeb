@@ -1,0 +1,14 @@
+.listItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainList {
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 50px;
+}

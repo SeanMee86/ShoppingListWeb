@@ -1,13 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthService} from './auth.service';
-import {FirestoreService} from './firestore.service';
-import {MatSelectionListChange} from '@angular/material/list';
-
-interface GroceryItem {
-  name: string;
-  quantity: number;
-  gotten: boolean;
-}
+import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,48 +7,15 @@ interface GroceryItem {
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent {
 
   user = this.authService.user;
-  uid: string;
-  groceryList: GroceryItem[] = [];
 
-  constructor(private authService: AuthService, private firestore: FirestoreService) {
-  }
-
-  ngOnInit(): void {
-    this.authService.getUID().subscribe(res => {
-      if (res !== null) {
-        this.uid = res.uid;
-        this.getGroceryList();
-      }
-    });
-  }
+  constructor(
+    private authService: AuthService,
+  ){}
 
   signOut() {
     this.authService.logout();
-  }
-
-  getUsers() {
-    this.firestore.getUsers()
-      .subscribe(res => {
-        res.forEach(doc => {
-          console.log(doc.payload.doc.data());
-        });
-      });
-  }
-
-  getGroceryList() {
-    this.firestore.getGroceryList(this.uid).subscribe(res => {
-      this.groceryList = res.map(doc => doc.payload.doc.data() as GroceryItem);
-    });
-  }
-
-  onSelectionChange(e: MatSelectionListChange) {
-    console.log(e.option.selected);
-  }
-
-  getUID() {
-    console.log(this.uid);
   }
 }

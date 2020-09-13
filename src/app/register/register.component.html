@@ -1,20 +1,28 @@
-<div *ngIf="!(user | async)">
+<div>
   <mat-card style="display: flex; flex-flow: column; max-width: 400px; width: 100%; margin: 20px auto; padding: 50px;">
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
-      <input type="text" [(ngModel)]="email" placeholder="email" matInput>
+      <input
+        type="text"
+        [(ngModel)]="email"
+        placeholder="email"
+        matInput>
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
-      <input type="password" [(ngModel)]="password" placeholder="password" matInput>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="password"
+        matInput>
     </mat-form-field>
 
-    <div style="display: flex; justify-content: space-between">
-      <button mat-raised-button color="accent" (click)="signup()" style="width: 100%; max-width: 140px; margin: 20px auto;">
+    <div class="buttonContainer">
+      <button mat-raised-button class="authBtn" color="accent" (click)="signup()">
         Signup
       </button>
 
-      <button mat-raised-button color="accent" (click)="login()"  style="width: 100%; max-width: 140px; margin: 20px auto;">
+      <button mat-raised-button class="authBtn" color="accent" (click)="login()">
         Login
       </button>
     </div>

@@ -1,0 +1,14 @@
+<mat-card class="mainList">
+  <mat-list>
+    <mat-list-item *ngFor="let item of groceryList" >
+      <div class="listItem">
+        <span>
+          {{item.name}}: {{item.quantity}}
+        </span>
+        <mat-checkbox
+          [checked]="item.gotten">
+        </mat-checkbox>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
