@@ -1,14 +1,23 @@
-<mat-card class="mainList">
-  <mat-list>
+<mat-card class="mainListContainer">
+  <mat-list class="mainList">
     <mat-list-item *ngFor="let item of groceryList" >
       <div class="listItem">
         <span>
           {{item.name}}: {{item.quantity}}
         </span>
         <mat-checkbox
-          [checked]="item.gotten">
+          [checked]="item.gotten"
+          (change)="onChecked($event)"
+          [value]="item.id">
         </mat-checkbox>
       </div>
     </mat-list-item>
   </mat-list>
+  <button
+    mat-mini-fab
+    color="primary"
+    class="authBtn"
+    (click)="openDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
 </mat-card>

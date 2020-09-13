@@ -9,3 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   max-width: 140px;
   margin: 20px auto;
 }
+
+.add-item-panel {
+  width: 400px;
+}

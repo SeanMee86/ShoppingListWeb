@@ -1,0 +1,24 @@
+<div class="itemForm">
+  <h1>Add Item to List</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Item Name</mat-label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      placeholder="Item Name"
+      matInput>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Quantity</mat-label>
+    <input
+      type="number"
+      [(ngModel)]="quantity"
+      placeholder="Quantity"
+      matInput>
+  </mat-form-field>
+  <button
+    class="authBtn"
+    mat-raised-button
+    color="primary"
+    (click)="onAddItem()">Add Item</button>
+</div>

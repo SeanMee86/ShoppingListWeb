@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shoppinglist-cf617": {
+      "hosting": {
+        "ShoppingListWeb": [
+          "shoppinglist-cf617"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shoppinglist-cf617"
+  }
+}

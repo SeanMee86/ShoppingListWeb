@@ -17,29 +17,35 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { GroceryListComponent } from './grocery-list/grocery-list.component';
+import { AddItemDialogComponent } from './add-item-dialog/add-item-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    GroceryListComponent
+    GroceryListComponent,
+    AddItemDialogComponent
   ],
-    imports: [
-        AppRoutingModule,
-        BrowserModule,
-        FormsModule,
-        HttpClientModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFirestoreModule,
-        AngularFireAuthModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatInputModule,
-        MatCardModule,
-        MatButtonModule,
-        MatListModule,
-        MatCheckboxModule
-    ],
+  imports: [
+    AppRoutingModule,
+    MatDialogModule,
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

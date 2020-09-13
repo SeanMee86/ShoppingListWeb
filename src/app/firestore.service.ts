@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {GroceryItem} from './models/GroceryItem.model';
+import {MatDialogRef} from '@angular/material/dialog';
+import {AddItemDialogComponent} from './add-item-dialog/add-item-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,15 +16,21 @@ export class FirestoreService {
     ) {
   }
 
-  getUsers() {
-    return this.userRef.snapshotChanges();
-  }
-
   getGroceryList(uid: string) {
     return this.userRef
       .doc(uid)
       .collection('GroceryList')
       .snapshotChanges();
+  }
+
+  addItem(uid: string, item: GroceryItem, dialog: MatDialogRef<AddItemDialogComponent>) {
+    this.userRef
+      .doc(uid)
+      .collection('GroceryList')
+      .add(item)
+      .then(() => {
+        dialog.close();
+      });
   }
 
   updateItem(uid: string, itemId: string, gotten: boolean) {
@@ -30,8 +39,6 @@ export class FirestoreService {
       .collection('GroceryList')
       .doc(itemId)
       .update({gotten})
-      .then(res => {
-        console.log(res);
-      });
+      .then(() => {});
   }
 }

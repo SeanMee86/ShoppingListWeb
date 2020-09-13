@@ -2,13 +2,21 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
 }
 
 .mainList {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.mainListContainer {
   display: flex;
   flex-flow: column;
   max-width: 400px;
   width: 100%;
   margin: 20px auto;
   padding: 50px;
+  align-items: flex-end;
 }
