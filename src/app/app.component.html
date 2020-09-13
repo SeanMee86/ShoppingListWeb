@@ -5,14 +5,8 @@
     <button (click)="getUID()">Get UID</button>
   </div>
   <mat-card style="display: flex; flex-flow: column; max-width: 400px; width: 100%; margin: 20px auto; padding: 50px;">
-<!--    <ul>-->
-<!--      <li *ngFor="let groceryItem of groceryList">-->
-<!--        {{groceryItem.name}}<br>-->
-<!--        Quantity: {{groceryItem.quantity}}-->
-<!--      </li>-->
-<!--    </ul>-->
-    <mat-selection-list>
-      <mat-list-option *ngFor="let item of groceryList">
+    <mat-selection-list (selectionChange)="onSelectionChange($event)">
+      <mat-list-option *ngFor="let item of groceryList" >
         {{item.name}}: {{item.quantity}}
       </mat-list-option>
     </mat-selection-list>

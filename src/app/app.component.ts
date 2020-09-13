@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from './auth.service';
 import {FirestoreService} from './firestore.service';
+import {MatSelectionListChange} from '@angular/material/list';
 
 interface GroceryItem {
   name: string;
@@ -49,6 +50,10 @@ export class AppComponent implements OnInit{
     this.firestore.getGroceryList(this.uid).subscribe(res => {
       this.groceryList = res.map(doc => doc.payload.doc.data() as GroceryItem);
     });
+  }
+
+  onSelectionChange(e: MatSelectionListChange) {
+    console.log(e.option.selected);
   }
 
   getUID() {
