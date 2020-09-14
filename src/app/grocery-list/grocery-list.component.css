@@ -12,6 +12,7 @@
 }
 
 .mainListContainer {
+  box-sizing: border-box;
   display: flex;
   flex-flow: column;
   max-width: 400px;

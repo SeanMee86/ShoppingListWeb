@@ -3,3 +3,12 @@
   justify-content: space-around;
 }
 
+.authCard {
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 50px;
+  box-sizing: border-box;
+}

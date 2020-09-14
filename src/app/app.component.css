@@ -1,3 +1,8 @@
+.app-body {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .signOutBtn {
   display: flex;
   justify-content: flex-end;
