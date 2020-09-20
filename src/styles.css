@@ -12,6 +12,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .logOutBtn {
   width: 140px;
+  margin: 20px;
 }
 
 .add-item-panel {

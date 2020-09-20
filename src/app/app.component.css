@@ -14,3 +14,9 @@
   width: 100%;
   max-width: 250px;
 }
+
+@media screen and (max-width: 767px) {
+  .app-header {
+    flex-flow: column;
+  }
+}
