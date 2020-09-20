@@ -1,10 +1,16 @@
 .app-body {
-  padding: 20px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
-.signOutBtn {
+.app-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
   padding: 20px;
+}
+
+.app-header img {
+  width: 100%;
+  max-width: 250px;
 }

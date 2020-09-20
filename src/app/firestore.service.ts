@@ -9,7 +9,7 @@ import {AddItemDialogComponent} from './add-item-dialog/add-item-dialog.componen
 })
 export class FirestoreService {
 
-  userRef = this.firestore.collection('User');
+  userRef = this.firestore.collection('Users');
 
   constructor(
     private firestore: AngularFirestore

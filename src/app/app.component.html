@@ -1,12 +1,15 @@
-<div class="app-body">
+<div class="app-header">
+  <img src="../assets/lwf-logo.png" alt="">
   <div
     class="signOutBtn"
     *ngIf="user | async">
     <button
       mat-raised-button
-      class="authBtn"
+      class="logOutBtn"
       color="warn"
       (click)="signOut()">Sign Out</button>
   </div>
+</div>
+<div class="app-body">
   <router-outlet></router-outlet>
 </div>

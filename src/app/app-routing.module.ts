@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
+import {AuthComponent} from './Auth/auth.component';
 import {
   AngularFireAuthGuard,
   redirectLoggedInTo,
@@ -14,7 +14,7 @@ const redirectLoggedInToMainPage = () => redirectLoggedInTo(['']);
 const routes: Routes = [
   {
     path: 'authenticate',
-    component: RegisterComponent,
+    component: AuthComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectLoggedInToMainPage }
   },
